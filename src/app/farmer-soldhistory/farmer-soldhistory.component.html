@@ -17,10 +17,10 @@
 
             <div class="card">
               <!-- <h4 style="text-align: left;"><u> Fill below details to continue placing request</u></h4> -->
-              <table class="table table-striped">
+              <table class="table ">
                 <thead style="width: fit-content;">
                   <tr>
-                    <th scope="col">#</th>
+
                     <th scope="col">Date</th>
                     <th scope="col">Crop Name</th>
                     <th scope="col">Quantity</th>
@@ -30,33 +30,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                 <tr *ngFor="let data of soldData">
+                    <td>
+                      {{data.date}}
+                    </td>
+                    {{data.sellRequest.cropName}}
+                    <td>
+                        {{data.sellRequest.quantity}}
+                    </td>
+                    <td>{{data.msp}}</td>
+                    <td>{{data.soldPrice}}</td>
+                    <td>{{data.totalPrice}}</td>
+                 </tr>
                 </tbody>
               </table>
 

@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { SoldHistory } from '../sold-history';
+
 import { SoldHistoryService } from '../sold-history.service';
 
 @Component({
@@ -10,24 +10,20 @@ import { SoldHistoryService } from '../sold-history.service';
 })
 export class FarmerSoldhistoryComponent implements OnInit {
 
-  soldHistory!:SoldHistory[]
 
+
+  soldData:any;
   constructor( private soldService:SoldHistoryService ) {
-
-
-
   }
 
   ngOnInit(): void {
 
 
-    this.soldService.getAllSoldHistory().subscribe({
-      next:data=>console.log(data)
+    this.soldService.getAllSoldHistory().subscribe(res=>{
+this.soldData=res
     })
-console.log(this.soldHistory)
-// console.log(this.soldHistory.History)
 
-    // console.log(JSON.stringify( this.soldHistory));
+
   }
 
 }
