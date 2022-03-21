@@ -17,6 +17,7 @@ import { FarmerWelcomeComponent } from './farmer-welcome/farmer-welcome.componen
 import { FarmerSellrequestComponent } from './farmer-sellrequest/farmer-sellrequest.component';
 import { FarmerSoldhistoryComponent } from './farmer-soldhistory/farmer-soldhistory.component';
 import { MarketPlaceComponent } from './market-place/market-place.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MarketPlaceComponent } from './market-place/market-place.component';
     FarmerWelcomeComponent,
     FarmerSellrequestComponent,
     FarmerSoldhistoryComponent,
-    MarketPlaceComponent
+    MarketPlaceComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
